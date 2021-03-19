@@ -9,7 +9,7 @@ package belajar.java.oop;
  *
  * @author zero
  */
-public class PolymorphimsApp {
+public class PolymorphismApp {
     public static void main(String[] args) {
         Employee employee = new Employee("Aden");
         employee.sayHello("Aden");
@@ -19,7 +19,7 @@ public class PolymorphimsApp {
         
         employee.sayHello(new Employee("Budi"));
         employee.sayHello(new Manager("Joko"));
-        employee.sayHello("Rizki");
+        employee.sayHello(new VicePresident("Riski"));
     }
     
 }
