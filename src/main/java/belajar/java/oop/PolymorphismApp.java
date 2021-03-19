@@ -11,15 +11,21 @@ package belajar.java.oop;
  */
 public class PolymorphismApp {
     public static void main(String[] args) {
-        Employee employee = new Employee("Aden");
-        employee.sayHello("Aden");
         
-        employee = new Manager("Denanda");
-        employee.sayHello("Denanda");
-        
-        employee.sayHello(new Employee("Budi"));
-        employee.sayHello(new Manager("Joko"));
-        employee.sayHello(new VicePresident("Riski"));
+        sayHello(new Employee("Budi"));
+        sayHello(new Manager("Joko"));
+        sayHello(new VicePresident("Riski"));
     }
     
+    static void sayHello(Employee employee){
+        if(employee instanceof VicePresident){
+            VicePresident vp = (VicePresident) employee;
+            System.out.println("Hello VP " + vp.name);
+        }else if(employee instanceof Manager){
+            Manager manager = (Manager) employee;
+            System.out.println("Hello Manager " + manager.name);
+        }else{
+            System.out.println("Hello " + employee.name);
+        }
+    }
 }

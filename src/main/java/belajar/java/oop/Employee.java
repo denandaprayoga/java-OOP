@@ -24,7 +24,4 @@ class Employee {
     void sayHello(String name){
         System.out.println("Hello " + name + ", my name is " + this.name);
     }
-    void sayHello(Employee employee){
-        System.out.println("Hello, " + employee.name);
-    }
 }
