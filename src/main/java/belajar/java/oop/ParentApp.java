@@ -9,12 +9,15 @@ package belajar.java.oop;
  *
  * @author zero
  */
-public class ManagerApp {
+public class ParentApp {
     public static void main(String[] args) {
-        Manager manager = new Manager("Denanda prayoga");
-        manager.sayHello("aden");
+        Child child = new Child();
+        child.name = "Aden";
+        System.out.println(child.name);
+        child.doIt();
         
-        VicePresident vc = new VicePresident("Aden");
-        vc.sayHello("Denanda");
+        Parent parent = child;
+        parent.doIt(); //Accessing from method override
+        
     }
 }
