@@ -6,6 +6,7 @@
 package belajar.java.oop.application;
 
 import belajar.java.oop.data.Avanza;
+import belajar.java.oop.data.Bus;
 import belajar.java.oop.data.Car;
 
 /**
@@ -15,8 +16,17 @@ import belajar.java.oop.data.Car;
 public class CarApp {
     public static void main(String[] args) {
         Car avanza = new Avanza();
+        Car bus = new Bus();
         
         System.out.println(avanza.tier());
         avanza.drive();
+        System.out.println("Brand: " + avanza.getBrand());
+        System.out.println("Maintenance: " + avanza.isMaintenance());
+        
+        System.out.println(bus.tier());
+        bus.drive();
+        System.out.println("Brand: " + bus.getBrand());
+        System.out.println("Maintenance: " + bus.isMaintenance());
+        System.out.println("Big: " + bus.isBig());
     }
 }

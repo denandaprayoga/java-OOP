@@ -9,7 +9,10 @@ package belajar.java.oop.data;
  *
  * @author aden
  */
-public interface Car {
+public interface Car extends HasBrand, IsMaintenance{
     void drive();
     int tier();
+    default boolean isBig(){
+        return false;
+    }
 }
