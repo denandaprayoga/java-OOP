@@ -21,5 +21,7 @@ public class CompanyApp {
         
         System.out.println("Nama perusahaan: " + employee.getNameCompany());
         System.out.println("Nama Karyawan: " + employee.getName());
+        
+        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }
